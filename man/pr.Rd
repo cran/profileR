@@ -1,47 +1,59 @@
-\name{subscore.reliability}
-\alias{subscore.reliability}
-\title{Within-person and Between-person Subscore Reliability via Profile Analysis}
+\name{pr}
+\alias{pr}
+\alias{plot.prof}
+
+\title{Pattern and Level Reliability via Profile Analysis}
 \usage{
-  subscore.reliability(form1,form2)
+  pr(form1,form2)  
+  
+  \method{plot}{prof}(x, ...)
 }
+
 \arguments{
   \item{form1,form2}{Two data matrices or data frames; rows
   represent individuals, columns represent subscores. Both
   forms should have the same individuals and subscores in
   the same order. Missing subscores have to be inserted as
   NA.}
+  
+  \item{x}{An object of class \code{"prof"} returned from the \code{pr} function.}
+  
+  \item{...}{Additional arguments to be passed.} 
 }
+
 \value{
+ An object of class prof is returned, listing the following components:
+\describe{
   \item{reliability}{Within-person, between-person, and
   overall subscore reliability}
 
   \item{pattern.level}{A matrix of all pattern and level
   values obtained from the subscores}
-}
+}}
+
 \description{
-  The \code{subscore.reliability} function uses subscores
-  from two parallel test forms and compute profile
-  analysis-based subscore reliability coefficients as
-  described in Bulut (2013).
+  The \code{pr} function uses subscores
+  from two parallel test forms and computes profile 
+  reliability coefficients as described in Bulut (2013).
 }
+
 \details{
-  Within-person and between-person reliability coefficients
+  Profile pattern and level reliability coefficients
   are based on the profile analysis approach described in
   Davison and Davenport (2002) and Bulut (2013). Using the
   parallel test forms or multiple administration of the
-  same test form, within-person and between-person subscore
-  reliability coefficients are computed. Within-person
-  reliability is an indicator of variability between the
-  subscores of an examinee and the between-person subscore
-  reliability is an indicator of the variation among all
-  examinees. For details, see
+  same test form, pattern and level reliability coefficients are computed. 
+  Pattern reliability is an indicator of variability between the
+  subscores of an examinee and the level reliability is an indicator of 
+  the average subscore variation among all examinees. For details, see
   \href{http://conservancy.umn.edu/bitstream/155592/1/Bulut_umn_0130E_13879.pdf}{Bulut
   (2003)}.
 }
+
 \examples{
 \dontrun{
 data(EEGS)
-result <- subscore.reliability(EEGS[,c(1,3,5)],EEGS[,c(2,4,6)])
+result <- pr(EEGS[,c(1,3,5)],EEGS[,c(2,4,6)])
 print(result)
 plot(result)
 }
@@ -62,6 +74,6 @@ plot(result)
   468-484.
 }
 \seealso{
-  \code{\link{profileplot}},\code{\link{print.prof}},\code{\link{plot.prof}}
+  \code{\link{profileplot}}
 }
 
