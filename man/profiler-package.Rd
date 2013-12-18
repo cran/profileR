@@ -1,11 +1,11 @@
 \docType{package}
 \name{profileR-package}
 \alias{profileR-package}
-\title{Profile Analysis and Its Applications}
+\title{Profile Analysis of Multivariate Data in R}
 \description{
-  profileR provides a set of tools that implement the
-  profile analysis and cross-validation techniques
-  described in Davison & Davenport (2002) and Bulut (2013).
+  The package profileR provides a set of multivariate methods and data visualization 
+  tools to implement profile analysis and cross-validation techniques described in 
+  Davison & Davenport (2002) and Bulut (2013).
 }
 \author{
   Okan Bulut \email{okanbulut84@gmail.com}
