@@ -1,6 +1,8 @@
 #'@export
 
-profileplot <- function(form,person.id,interval=10,by.pattern=TRUE,original.names=TRUE) {
+profileplot <- function(form,person.id,standardize=TRUE,interval=10,by.pattern=TRUE,original.names=TRUE) {
+	
+	if(standardize) {form <- scale(form)}
 	
 	if(by.pattern) {
 	
@@ -106,11 +108,11 @@ profileplot <- function(form,person.id,interval=10,by.pattern=TRUE,original.name
 		Scoresi <- form[,i]
     		namei <- names[i]
     		colouri <- colours[i]
-    		if (i == 1) { plot1 <- plot(Scoresi,col=colouri,type="l",ylim=c(mymin,mymax),ylab="Score",xlab="Person") }
+    		if (i == 1) { plot1 <- plot(Scoresi,col=colouri,type="l",ylim=c(mymin,mymax),ylab="Score",xlab="Index") }
     		else         {points(Scoresi, col=colouri,type="l")                                     }
     		lastxval <- length(Scoresi)
     		lastyval <- Scoresi[length(Scoresi)]
-    		text((lastxval-10),(lastyval),namei,col="black",cex=0.6)}
+    		text((lastxval),(lastyval),namei,col="black",cex=0.6)}
 	}
     return(plot1)
 }
