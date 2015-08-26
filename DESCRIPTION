@@ -1,23 +1,22 @@
 Package: profileR
 Title: Profile Analysis of Multivariate Data in R
 Type: Package
-Description: The package profileR provides a set of multivariate methods and data visualization tools 
+Description: Fit profile analytic models. This includes multivariate methods and data visualization tools 
     to implement profile analysis and cross-validation techniques described 
     in Davison & Davenport (2002) and Bulut (2013).
-Version: 0.2-1
-Date: 12-20-2013
-Author: Okan Bulut <okanbulut84@gmail.com>, Christopher David Desjardins
-    <cddesjardins@gmail.com>
+Version: 0.3
+Date: 2015-08-26
+Author: Okan Bulut <okanbulut84@gmail.com>, Christopher David Desjardins <cddesjardins@gmail.com>, 
 Maintainer: Christopher David Desjardins <cddesjardins@gmail.com>
-Depends: ggplot2, MASS, RColorBrewer, reshape, methods, plyr, R (>=
+Depends: ggplot2, MASS, RColorBrewer, reshape, methods, lavaan, R (>=
         3.0.0)
 License: GPL (>= 2)
 LazyData: true
-Collate: 'anova.critpat.R' 'cp.R' 'pams.R' 'pbg.R' 'pc.R'
-        'plot.critpat.R' 'plot.prof.R' 'pr.R' 'print.critpat.R'
+Collate: 'anova.critpat.R' 'cpa.R' 'mpa.R' 'pams.R' 'paos.R' 'pbg.R'
+        'pcv.R' 'plot.critpat.R' 'plot.prof.R' 'pr.R' 'print.critpat.R'
         'print.prof.R' 'print.profg.R' 'profileplot.R'
-        'summary.critpat.R' 'summary.profg.R'
-Packaged: 2013-12-20 17:01:52 UTC; chris
+        'summary.critpat.R' 'summary.profg.R' 'wprifm.R'
 NeedsCompilation: no
+Packaged: 2015-08-26 16:53:21 UTC; chris
 Repository: CRAN
-Date/Publication: 2013-12-20 23:14:29
+Date/Publication: 2015-08-26 23:09:42

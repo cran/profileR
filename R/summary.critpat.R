@@ -1,6 +1,12 @@
-
-#'@S3method summary critpat
-
+#' Summary of criterion-related profile analysis
+#'
+#' Provides a summary of the criterion-related profile analysis
+#'
+#' @method summary critpat
+#' @param object object of class \code{critpat}
+#' @param ... additional arguments affecting the summary produced.
+#' @export
+#' @seealso \code{\link{cpa}}
 summary.critpat <- function(object, ...){
 	cat("Call:\n")
 	print(object$call)
@@ -15,4 +21,3 @@ summary.critpat <- function(object, ...){
   print(object$pat.comp)
   }
 }
-
