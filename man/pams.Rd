@@ -4,10 +4,10 @@
 \alias{pams}
 \title{Profile Analysis via Multidimensional Scaling}
 \usage{
-pams(x, dim)
+pams(data, dim)
 }
 \arguments{
-\item{x}{A data matrix or data frame; rows represent individuals, columns represent scores; missing scores are not allowed.}
+\item{data}{A data matrix or data frame; rows represent individuals, columns represent scores; missing scores are not allowed.}
 
 \item{dim}{Number of dimensions to be extracted from the data.}
 }
@@ -28,9 +28,6 @@ data(PS)
 result <- pams(PS[,2:4], dim=2)
 result
 }
-}
-\author{
-Okan Bulut \email{okanbulut84@gmail.com}
 }
 \references{
 Davenport, E. C., Ding, S., & Davison, M. L. (1995). PAMS: SAS Template.
