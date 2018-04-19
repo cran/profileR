@@ -96,17 +96,11 @@ pbg <- function(data, group, original.names=FALSE, profile.plot=FALSE) {
     allS <- var(z[,1:k]) #overall variance
     xbar <- apply(z[,1:k],2,mean) #grand mean
     xbar.dif <- cont2 %*% xbar
-    
-    c.vector <- vector()
-    for (i in 1:g) {
-      c.vector[i] <- nrow(z[z$group==levels(z$group)[i],])
-    }
-    
-    F.val <- (sum(c.vector, na.rm = TRUE))*sum(xbar.dif*(solve(cont2%*%allS%*%t(cont2)) %*% xbar.dif))
-    p.val <- pf(F.val*(sum(c.vector, na.rm = TRUE)-k+1)/(sum(c.vector, na.rm = TRUE)-1)/(k-1), (k-1), (sum(c.vector, na.rm = TRUE)-k+1), 
-             lower.tail=F)
+    t.sqr <- n*t(xbar.dif)%*%solve(summary(fit1, test="Wilks")$SS$Residuals)%*%xbar.dif
+    F.val <- (n-g-k+2)/(k-1)*t.sqr
     df1 <- (k-1)
-    df2 <- (sum(c.vector, na.rm = TRUE)-k+1)
+    df2 <- (n-g-k+2)
+    p.val <- pf(F.val, df1, df2, lower.tail = FALSE)
     flatness <- data.frame(F.val,df1,df2,p.val)
     names(flatness) <- c("F","df1","df2","p-value")
     
