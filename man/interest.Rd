@@ -41,7 +41,7 @@
  \item{landscpr}{Landscaper}
 }}
 \source{
-\url{http://psych.colorado.edu/~carey/Courses/PSYC7291/ClassDataSets.htm}
+\url{https://web.archive.org/web/20071102075513/http://psych.colorado.edu/~carey/Courses/PSYC7291/DataSets/Documentation/InterestDataDoc.txt}
 }
 \usage{
 interest

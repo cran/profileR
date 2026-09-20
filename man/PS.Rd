@@ -6,7 +6,7 @@
 		\item{Person}{Person ID}
 		\item{NEU}{Neurotic scale score}
 		\item{PSY}{Psychotic scale score}
-		\item{CD}{}{Character disorder scale score}
+		\item{CD}{Character disorder scale score}
 	}}
 \source{
   Davison, M. L., Kim, S-K., & Close, C. W. (2009). Factor
